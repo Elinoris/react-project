@@ -1,0 +1,149 @@
+/* ====== סגנון כללי לעיצוב הגוף והרקע ====== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f8ff;
+    height: 100vh;
+}
+
+/* ====== מרכז את מסך ההתחלה ====== */
+.start-screen-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+}
+
+/* ====== עיצוב הכותרת במסך ההתחלה ====== */
+.start-screen-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ====== רווח בין שדות הקלט ====== */
+.start-screen-container > div {
+    margin: 8px 0;
+}
+
+/* ====== עיצוב תוויות וכניסות ====== */
+label {
+    margin-right: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="number"], select {
+    padding: 6px 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+}
+
+/* ====== עיצוב כפתור ====== */
+.start-screen-container button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.start-screen-container button:hover {
+    background-color: #0056b3;
+}
+
+/* ====== טקסט שגיאה ====== */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ====== סגנון ללוח המשחק ====== */
+.board {
+    display: grid;
+    gap: 5px;
+    background-color: #00509e;
+    padding: 10px;
+    border-radius: 12px;
+    margin: 20px auto;
+    user-select: none;
+}
+
+/* הלוח יתאים את עצמו למספר העמודות והשורות */
+.board.cell-7x6 {
+    grid-template-columns: repeat(7, 60px);
+    grid-template-rows: repeat(6, 60px);
+}
+
+.board.cell-6x5 {
+    grid-template-columns: repeat(6, 60px);
+    grid-template-rows: repeat(5, 60px);
+}
+
+/* תבנית גנרית שמחשבת לפי גודל */
+.board.dynamic {
+    /* אפשר לשנות לפי גודל דינמי */
+}
+
+/* תא בלוח */
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: #a9c4f2;
+    border-radius: 50%;
+    box-shadow: inset 0 0 5px #00000066;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* אסימון של שחקן 1 */
+.cell.player1 {
+    background-color: #ff3b3b;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* אסימון של שחקן 2 */
+.cell.player2 {
+    background-color: #f3ff3b;
+    box-shadow: 0 0 10px #ffff00;
+}
+
+/* הצגת שחקן בתור */
+.current-player {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222;
+}
+
+/* כפתור משחק מחדש */
+.restart-button {
+    margin-top: 15px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.restart-button:hover {
+    background-color: #19692c;
+}
+
+
